@@ -31,6 +31,7 @@ public class GarbageAnalyzer {
                 break loop;
             }
         }
+        System.out.println("Starting mark");
         MarkSet marked = new MarkSet();
         for (Iterator it = runtime.getHeapRoots(); it.hasNext(); ) {
             marked.mark((JavaReference)it.next());
