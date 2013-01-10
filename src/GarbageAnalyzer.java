@@ -54,12 +54,14 @@ public class GarbageAnalyzer {
                         statsMap.put(clazz, stats);
                     }
                     stats.instanceCount++;
+                    stats.totalSize += object.getSize();
                 }
             }
         }
         System.out.println("Found " + dead + " dead objects");
         for (Map.Entry<JavaClass,PerClassStats> entry : statsMap.entrySet()) {
-            System.out.println(entry.getKey().getName() + " " + entry.getValue().instanceCount);
+            PerClassStats stats = entry.getValue();
+            System.out.println(entry.getKey().getName() + " " + stats.instanceCount + " " + stats.totalSize);
         }
     }
 }
