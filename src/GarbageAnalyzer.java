@@ -15,13 +15,8 @@ import com.ibm.dtfj.java.JavaStackFrame;
 import com.ibm.dtfj.java.JavaThread;
 
 public class GarbageAnalyzer {
-    /**
-     * @param args
-     */
     public static void main(String[] args) throws Exception {
-//        Image image = new PHDImageFactory().getImage(new File("c:\\Documents and Settings\\s09\\Desktop\\heapdump.20130108.103023.18306.0002.phd"));
-//        String dump = "C:\\Documents and Settings\\s09\\Desktop\\core.20130109.154724.18306.0003.dmp";
-        String dump = "C:\\opt\\IBM\\WebSphere\\AppServer-7.0\\profiles\\AppSrv01\\core.20130108.161246.4472.0001.dmp";
+        String dump = args[0];
         Image image = new ImageFactory().getImage(new File(dump), new File(dump + ".xml"));
         JavaRuntime runtime = null;
         loop: for (Iterator it = image.getAddressSpaces(); it.hasNext(); ) {
