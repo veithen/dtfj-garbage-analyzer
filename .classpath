@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_34"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.java.diagnostics.dbda_2.2.2.20110708170405/dumpAnalyzer.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.api_1.3.2.200909291456/lib/dtfj.api.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.java.diagnostics.dbda.core_2.2.2.20110708170405/coreAnalyzers.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.phd_1.3.2.200909291456/lib/dtfj.phd.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.j9_1.3.2.200909291456/lib/recordio.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.j9_1.3.2.200909291456/lib/dtfj.j9.corefilesupport.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.j9_1.3.2.200909291456/lib/dtfj.j9.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.j9_1.3.2.200909291456/lib/dtfj.j9.javacore.jar"/>
-	<classpathentry kind="lib" path="C:/Documents and Settings/s09/IBM/ISAv41/applications/eclipse/plugins/com.ibm.dtfj.j9_1.3.2.200909291456/lib/dtfj.j9.javacore.reader.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/WAS 7.0"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
