@@ -12,6 +12,8 @@ import com.ibm.dtfj.java.JavaObject;
 import com.ibm.dtfj.java.JavaReference;
 
 public class MarkSet {
+    private final boolean excludeWeakReferences;
+    
     private final Map<Long,byte[]> bitmaps = new HashMap<Long,byte[]>();
     
     /**
@@ -24,6 +26,10 @@ public class MarkSet {
     
     private int count;
     
+    public MarkSet(boolean excludeWeakReferences) {
+        this.excludeWeakReferences = excludeWeakReferences;
+    }
+
     private boolean getSetMark(long address, boolean set) {
         address /= 4; // Assume alignment is 32bit
         Long chunkIndex = address >> 18; // We use one bitmap per 2^18 addresses, i.e. per MB of heap
@@ -83,11 +89,13 @@ public class MarkSet {
     }
 
     private void markOne(JavaReference ref) throws Exception {
-        Object target = ref.getTarget();
-        if (target instanceof JavaClass) {
-            markOne((JavaClass)target);
-        } else {
-            markOne((JavaObject)target);
+        if (!excludeWeakReferences || ref.getReachability() != JavaReference.REACHABILITY_WEAK) {
+            Object target = ref.getTarget();
+            if (target instanceof JavaClass) {
+                markOne((JavaClass)target);
+            } else {
+                markOne((JavaObject)target);
+            }
         }
     }
     

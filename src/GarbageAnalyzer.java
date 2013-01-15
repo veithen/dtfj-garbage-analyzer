@@ -27,7 +27,7 @@ public class GarbageAnalyzer {
             }
         }
         System.out.println("Starting mark");
-        MarkSet marked = new MarkSet();
+        MarkSet marked = new MarkSet(true);
         for (Iterator it = runtime.getHeapRoots(); it.hasNext(); ) {
             marked.mark((JavaReference)it.next());
         }
